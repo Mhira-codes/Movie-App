@@ -17,7 +17,7 @@ const movieObject = {
 const App = () => {
   // !to et set of movies
   const [movies, setmovies] = useState([]);
-  // const [search, setsearch] =useState("")
+  const [search, setsearch] =useState("")
 
   // ! the async helps to fetch data
   const searchMovie = async (title) => {
@@ -32,17 +32,17 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>MovieLand</h1>
+      <h1>Movie<span className="land">Land</span></h1>
 
       <div className="search">
         <input
           placeholder="Search for Movies "
-          value=""
+          value={search}
           // !e.target.value use for storing items as string
-          // onChange={(e) => {setsearch(e.target.value)}}
-          onChange={() => {}}
+          onChange={(e) => {setsearch(e.target.value)}}
+         
         />
-        <BiSearchAlt className="search-icons" onClick={() => {}} />
+        <BiSearchAlt className="search-icons" onClick={() => searchMovie(search)} />
       </div>
       {
       movies?.length > 0 ? (
