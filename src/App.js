@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>Movie<span className="land">Land</span></h1>
+      <h1>Mo<span className="land">vieLand</span></h1>
 
       <div className="search">
         <input
